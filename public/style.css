@@ -1,0 +1,70 @@
+:root{
+	--speed:5;
+}
+.Machine {
+    background-color: orange;
+    height: 250px;
+    width: 810px;
+    margin: 40px;
+    padding-top: 40px;
+display: flex;
+}
+
+.slot{
+background-color: #FF4500;
+height: 200px;
+width: 250px;
+margin: 5px;
+border: solid black 3px;
+display: inline-block;	
+/*display: flex;*/
+overflow: hidden;
+text-align: center;
+line-height: 185px;
+font-size: 100pt;
+}
+#slot1{
+	margin-left: 13px;
+}
+#inpSpeed{
+	margin-left: 40px;
+	color: rgb(210 111 19);
+}
+.slot>.value{
+
+	animation: mov infinite calc(1s/var(--speed)); 
+}
+@keyframes mov{
+	0%{
+		transform: translateY(-200px);
+	}
+	100%{
+		transform: translateY(200px);
+	}
+}
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
